@@ -1,2 +1,3 @@
 # KJBP Press
- KJB Publishing and Press Front-End for https://kjbp.press
+ Front-end for KJB Publishing and Press. 
+ Link: https://kjbp.press
