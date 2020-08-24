@@ -3,6 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/kjbp/public_html/
     - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp terms.html $DEPLOYPATH
+    - /bin/cp sitemap.xml $DEPLOYPATH
+    - /bin/cp -R apps $DEPLOYPATH
     - /bin/cp -R css $DEPLOYPATH
     - /bin/cp -R fonts $DEPLOYPATH
     - /bin/cp -R img $DEPLOYPATH
