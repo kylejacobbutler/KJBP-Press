@@ -1,0 +1,1510 @@
+
+<style>body{padding: 50px;text-overflow:clip;}p{margin-bottom: 5px;}.page-break{display:block; margin-bottom: 75px; padding-bottom: 75px; border-bottom: 1px dashed #999;}@media (max-width: 480px) {body{padding: 10px;overflow-wrap: break-word;hyphens: auto;word-break: break-word;}}</style>
+<script type="f9b3a748e6fc4098eaf719bd-text/javascript" src='//cdn.smartresumewizard.com/pack/js/common.js?v=13.9'></script>
+<script type="f9b3a748e6fc4098eaf719bd-text/javascript" src='//cdn.smartresumewizard.com/js/resume/basics.js'></script>
+<script type="f9b3a748e6fc4098eaf719bd-text/javascript">
+    $(function() {
+        disableSelection();
+        disableRightClick();
+
+        var displayPlaceHolderText = '';
+        var displayUnderscores = '';
+        var emptyVars = document.querySelectorAll('.empty-var');
+        if(displayPlaceHolderText || displayUnderscores) {
+            for(var i = 0; i < emptyVars.length; i++) {
+                var replacementText = '________________________';
+                if (displayPlaceHolderText)  {
+                    var variableName = emptyVars[i].classList[1].toUpperCase();
+                    // Check for _LC, _SC, _UC, _0, and _0_CFDY ending
+                    if(variableName.endsWith('_LC') || variableName.endsWith('_SC') || variableName.endsWith('_UC')) {
+                        variableName = variableName.substring(0, variableName.length - 3);
+                    } else if(variableName.endsWith('_0')) {
+                        variableName = variableName.substring(0, variableName.length - 2);
+                    } else if(variableName.endsWith('_0_CFDY')) {
+                        variableName = variableName.substring(0, variableName.length - 7);
+                    }
+                    replacementText =  '[' +  variableName + ']';
+                }
+                emptyVars[i].innerHTML = replacementText + emptyVars[i].innerHTML;
+                emptyVars[i].classList.remove('empty-var');
+            }
+        }
+    });
+</script>
+<style>
+    /* Style the empty variables */
+    .empty-var{
+        display: inline-block;
+        width: 200px;
+        border-bottom: 1px solid #999;
+        height: 20px;
+        background: #e2e2e2;
+    }
+
+    body::-webkit-scrollbar {
+        height: 6px;
+        width: 6px;
+        background: #EFEFEF;
+        }
+    body::-webkit-scrollbar-thumb {
+        background: #999;
+        -webkit-border-radius: 6px;
+    }
+    body::-webkit-scrollbar-corner {
+        background: #000;
+    }
+    .WordSection1{overflow: hidden}
+</style>
+<style alt>.msocomanchor, .msocomoff, .MsoCommentText, .msocomtxt, .MsoCommentReference{display: none !important; visibility: hidden !important; opacity: 0;}</style>
+<meta charset='UTF-8' /><script type="f9b3a748e6fc4098eaf719bd-text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"Vg4DUVZXGwYFVFRXDgc=",licenseKey:"788d9c2c7a",applicationID:"5505596"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(22),c={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,i.indexOf("dev")!==-1&&(c.dev=!0),i.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&o.on("internal-error",function(t){r(t.stack)}),c.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,c){try{p?p-=1:i(c||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,s.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:s.now();o("err",[t,n])}var o=t("handle"),a=t(23),c=t("ee"),s=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),s.xhrWrappable&&t(10),d=!0)}c.on("fn-start",function(t,e,n){d&&(p+=1)}),c.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),c.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),c.on("internal-error",function(t){o("ierr",[t,s.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var i=t("ee"),o=t("handle"),a=t(9),c=t(8),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;i.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),i.on(w,function(t,e){var n=t[0];n instanceof x&&o("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),this.bstType])}),c.on(m,function(){this.bstStart=y.now()}),c.on(w,function(t,e){o(v,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),i.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),i.on(g+h,function(t){o("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){o(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){c.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),c=t("wrap-function")(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var c=r.apply(this,t);return i.emit(n+"start",[t,a],c),c.then(function(t){return i.emit(n+"end",[null,t],c),t},function(t){throw i.emit(n+"end",[t],c),t})})}var i=t("ee").get("fetch"),o=t(23),a=t(22);e.exports=i;var c=window,s="fetch-",f=s+"body-",u=["arrayBuffer","blob","json","text","formData"],d=c.Request,l=c.Response,p=c.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(c,"fetch",s),i.on(s+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(s+"done",[null,e],n)}else i.emit(s+"done",[t],n)}))},{}],7:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],9:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(s+u,r),o.on(c+u,i)},{}],10:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",c)}function o(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(v,i,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,e,n){function r(t){if(!c(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),w=Date.now(),v={spanId:h,traceId:m,timestamp:w};return(t.sameOrigin||s(t)&&l())&&(v.traceContextParentHeader=i(h,m),v.traceContextStateHeader=o(h,w,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&s(t)&&d())&&(v.newrelicHeader=a(h,m,w,n,r,f)),v}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",c=1,s="",f="";return i+"@nr="+o+"-"+c+"-"+n+"-"+r+"-"+t+"-"+a+"-"+s+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var c={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(c.d.tk=o),btoa(JSON.stringify(c))}function c(t){return f()&&s(t)}function s(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(19),h=t(13);e.exports={generateTracePayload:r,shouldGenerateTrace:c}},{}],12:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime]))}}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=s(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function o(t,e){t.params.status=e.status;var n=w(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){o(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var c=0;c<l;c++)e.addEventListener(d[c],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof v&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=s(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)})}},{}],13:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,c=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||c),"/"===i.pathname&&(r[t]=i),i}},{}],14:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(16);e.exports=r},{}],15:[function(t,e,n){function r(){}function i(t,e,n){return function(){return o(t,[f.now()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var o=t("handle"),a=t(22),c=t(23),s=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,e){u[e]=i(l+e,!0,"api")}),u.addPageAction=i(l+"addPageAction",!0),u.setCurrentRouteName=i(l+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(p+"tracer",[f.now(),t,n],r),function(){if(s.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw s.emit("fn-err",[arguments,this,t],n),t}finally{s.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=i(p+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),o("err",[t,f.now(),!1,e])}},{}],16:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],17:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],18:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!w){var e=Math.round(t.timeStamp),n={type:t.type};e<=l.now()?n.fid=l.now()-e:e>l.offset&&e<=Date.now()?(e-=l.offset,n.fid=l.now()-e):e=l.now(),w=!0,d("timing",["fi",e,n])}}function c(t){d("pageHide",[l.now(),t])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var s,f,u,d=t("handle"),l=t("loader"),p=t(21),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(i);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(o);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var w=!1,v=["click","keydown","mousedown","pointerdown","touchstart"];v.forEach(function(t){document.addEventListener(t,a,!1)})}p(c)}},{}],19:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",c=0;c<o.length;c++)i=o[c],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(31)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],20:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,s=c.match(a);s&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=s[1])}e.exports={agent:i,version:o,match:r}},{}],21:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,e,!1)}e.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],22:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],23:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],24:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?s(t,c,o):o()}function n(n,r,i,o){if(!l.aborted||o){t&&t(n,r,i);for(var a=e(i),c=m(n),s=c.length,f=0;f<s;f++)c[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function p(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||i(n)}function v(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:n,get:w,listeners:m,context:e,buffer:v,abort:a,aborted:!1};return x}function o(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(22),u={},d={},l=e.exports=i();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+b.offset],null,"api"),s("timing",["load",n]);var r=p.createElement("script");r.src="https://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===p.readyState&&o()}function o(){s("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(c=Math.max((new Date).getTime(),c))-b.offset}var c=(new Date).getTime(),s=t("handle"),f=t(22),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1177.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:c,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",o,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",i),l[m]("onload",r)),s("mark",["firstbyte",c],null,"api");var E=0,R=t(24)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var i=t("ee"),o=t(23),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,i){function nrWrapper(){var r,a,c,s;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,i],c])}u(e+"start",[r,a,i],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,i,o){i||(i="");var a,c,s,f="-"===i.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+i:i,o,c))}function u(n,r,i){if(!s||e){var o=s;s=!0;try{t.emit(n,r,i,e)}catch(a){l([a,n,r,i])}s=o}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var i in t)c.call(t,i)&&(e[i]=t[i]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=i),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,12,4,3]);</script><style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536870145 1107305727 0 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-536859905 -1073732485 9 0 511 0;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-alt:"Yu Gothic";
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;
+	mso-font-charset:128;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-134238209 -371195905 63 0 4129279 0;}
+@font-face
+	{font-family:"Helvetica Neue";
+	mso-font-alt:Sylfaen;
+	mso-font-charset:0;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:-452984065 1342208475 16 0 1 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+p.Body, li.Body, div.Body
+	{mso-style-name:Body;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	color:black;
+	border:none;
+	text-underline:black;}
+p.Default, li.Default, div.Default
+	{mso-style-name:Default;
+	mso-style-unhide:no;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Helvetica Neue";
+	mso-fareast-font-family:"Arial Unicode MS";
+	mso-bidi-font-family:"Arial Unicode MS";
+	color:black;
+	border:none;}
+span.Hyperlink0
+	{mso-style-name:"Hyperlink\.0";
+	mso-style-unhide:no;
+	mso-style-parent:Hyperlink;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:120463032;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1702669136 806761318 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;
+	color:windowtext;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:131296499;
+	mso-list-type:hybrid;
+	mso-list-template-ids:477279868 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:161237377;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1530299640 806761318 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;
+	color:windowtext;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:778725006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1643095786 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l3:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l3:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l3:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l3:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l3:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l3:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l3:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l3:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l3:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l4
+	{mso-list-id:1141770844;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1171542758 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l4:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l4:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;}
+@list l4:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:1.25in;
+	text-indent:-9.0pt;}
+@list l4:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:2.75in;
+	text-indent:-9.0pt;}
+@list l4:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	margin-left:4.25in;
+	text-indent:-9.0pt;}
+@list l5
+	{mso-list-id:1172917896;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-927032140 806761318 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l5:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;
+	color:windowtext;
+	mso-ansi-font-weight:normal;
+	mso-bidi-font-weight:normal;}
+@list l5:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:1.75in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.25in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:2.75in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l5:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:3.75in;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l5:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	margin-left:4.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6
+	{mso-list-id:1570462623;
+	mso-list-type:hybrid;
+	mso-list-template-ids:80894200 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l6:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l6:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l6:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:1927884541;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1497777964 67698689 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l7:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l7:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l7:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+<body lang=EN-US link=blue vlink="#954F72" style='tab-interval:.5in'>
+<div class=WordSection1>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal align=center style='text-align:center'><b><span style='font-size:16.0pt;line-height:107%;font-family:"Times New Roman",serif'>ONLINE
+PRIVACY POLICY AGREEMENT<o:p></o:p></span></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'> <span id='static_effective_date_cfdy' class='saved-var effective_date_cfdy step-'>August 25, 2020</span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> ( <span id='static_company_contact_short_name' class='saved-var company_contact_short_name step-0'>Copr.</span>)
+values its users' privacy. This Privacy Policy ("Policy") will help you
+understand how we collect and use personal information from those who visit our
+website or make use of our online facilities and services, and what we will and
+will not do with the information we collect. Our Policy has been designed and
+created to ensure those affiliated with <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> of our
+commitment and realization of our obligation not only to meet, but to exceed,
+most existing privacy standards.<o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>We reserve the right to
+make changes to this Policy at any given time. If you want to make sure that
+you are up to date with the latest changes, we advise you to frequently visit
+this page. If at any point in time <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> decides to make use
+of any personally identifiable information on file, in a manner vastly
+different from that which was stated when this information was initially
+collected, the user or users shall be promptly notified by email. Users at that
+time shall have the option as to whether to permit the use of their information
+in this separate manner.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>This Policy applies to
+<span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span><span style='color:#ED7D31;mso-themecolor:accent2'></span>,
+and it governs any and all data collection and usage by us. Through the use of
+https://kjbp.press<span style='color:#ED7D31;mso-themecolor:accent2'></span>,
+you are therefore consenting to the data collection procedures expressed in
+this Policy.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Please note that this
+Policy does not govern the collection and use of information by companies that <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>does not control, nor by individuals not employed or managed by us. If you
+visit a website that we mention or link to, be sure to review its privacy
+policy before providing the site with information. It is highly recommended and
+suggested that you review the privacy policies and statements of any website
+you choose to use or frequent to better understand the way in which websites garner,
+make use of and share the information collected.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Specifically, this Policy will inform you of the
+following<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpFirst style='margin-left:.25in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l3 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>What
+personally identifiable information is collected from you through our website;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l3 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>Why
+we collect personally identifiable information and the legal basis for such
+collection;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l3 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>How
+we use the collected information and with whom it may be shared;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='margin-left:.25in;mso-add-space:
+auto;text-indent:-.25in;mso-list:l3 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>What
+choices are available to you regarding the use of your data; and<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpLast style='margin-left:.25in;mso-add-space:auto;
+text-indent:-.25in;mso-list:l3 level1 lfo5'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman"'><span style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>The
+security procedures in place to protect the misuse of your information.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Information We Collect<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>It is always up to you
+whether to disclose personally identifiable information to us, although if you
+elect not to do so, we reserve the right not to register you as a user or
+provide you with any products or services.<span style='color:#ED7D31;
+mso-themecolor:accent2'></span> This website
+collects various types of information, such as:<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoListParagraph style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Voluntarily provided information which may
+include your name, address, email address, billing and/or credit card
+information etc. which may be used when you purchase products and/or services
+and to deliver the services you have requested. <o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoListParagraph style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Information automatically collected when
+visiting our website, which may include cookies, third party tracking
+technologies and server logs.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>In addition,
+<span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> may have the occasion to collect non-personal
+anonymous demographic information, such as age, gender, household income,
+political affiliation, race and religion, as well as the type of browser you
+are using, IP address, or type of operating system, which will assist us in
+providing and maintaining superior quality service.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>may also deem it necessary, from time to time, to follow websites that our
+users may frequent to gleam what types of services and products may be the most
+popular to customers or the general public.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Please rest assured that
+this site will only collect personal information that you knowingly and
+willingly provide to us by way of surveys, completed membership forms, and
+emails. It is the intent of this site to use personal information only for the
+purpose for which it was requested, and any additional uses specifically
+provided for on this Policy. <span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Why We Collect Information and For How
+Long<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>We are collecting your data for several reasons:<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>To better understand your needs and
+provide you with the services you have requested;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>To fulfill our legitimate interest in
+improving our services and products;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>To send you promotional emails containing
+information we think you may like when we have your consent to do so;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>To contact you to fill out surveys or
+participate in other types of market research, when we have your consent to do
+so;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l7 level1 lfo6'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>To customize our website according to your
+online behavior and personal preferences.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>The data we collect from
+you will be stored for no longer than necessary. The length of time we retain
+said information will be determined based upon the following criteria: the
+length of time your personal information remains relevant; the length of time
+it is reasonable to keep records to demonstrate that we have fulfilled our
+duties and obligations; any limitation periods within which claims might be
+made; any retention periods prescribed by law or recommended by regulators,
+professional bodies or associations; the type of contract we have with you, the
+existence of your consent, and our legitimate interest in keeping such
+information as stated in this Policy.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Use of Information Collected<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> does
+not now, nor will it in the future, sell, rent or lease any of its customer
+lists and/or names to any third parties.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> may
+collect and may make use of personal information to assist in the operation of
+our website and to ensure delivery of the services you need and request. At
+times, we may find it necessary to use personally identifiable information as a
+means to keep you informed of other possible products and/or services that may
+be available to you from https://kjbp.press<span style='color:#ED7D31;
+mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span><span style='color:#ED7D31;mso-themecolor:accent2'></span> may also be in
+contact with you with regards to completing surveys and/or research
+questionnaires related to your opinion of current or potential future services
+that may be offered.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><a name="_Hlk13747140"><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#ED7D31;mso-themecolor:
+accent2'></span></a><span style='mso-bookmark:_Hlk13747140'><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p></o:p></span></span></p>
+<p class=MsoNormal><span style='mso-bookmark:_Hlk13747140'><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>uses various third-party social media features including but not limited to
+<span id='static_select_social_media' class='saved-var select_social_media step-5'>Facebook, Instagram, Linkedin, Github, Soundcloud</span> and other interactive programs.<span style='mso-spacerun:yes'>&nbsp; </span>These may collect your IP address and require
+cookies to work properly.<span style='mso-spacerun:yes'>&nbsp; </span>These services
+are governed by the privacy policies of the providers and are not within
+<span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>'s control</span></span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Disclosure of Information<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> may
+not use or disclose the information provided by you except under the following
+circumstances:<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>as necessary to provide services or
+products you have ordered;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>in other ways described in this Policy or
+to which you have otherwise consented;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>in the aggregate with other information in
+such a way so that your identity cannot reasonably be determined;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>as required by law, or in response to a
+subpoena or search warrant;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>to outside auditors who have agreed to
+keep the information confidential;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>as necessary to enforce the Terms of
+Service;<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l6 level1 lfo7'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>as necessary to maintain, safeguard and
+preserve all the rights and property of <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Non-Marketing Purposes<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> greatly respects your
+privacy. We do maintain and reserve the right to contact you if needed for
+non-marketing purposes (such as bug alerts, security breaches, account issues,
+and/or changes in <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> products and services).<span style='mso-spacerun:yes'>&nbsp; </span>In certain circumstances, we may use our
+website, newspapers, or other public means to post a notice.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Children under the age of 13<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>'s
+website is not directed to, and does not knowingly collect personal
+identifiable information from, children under the age of thirteen (13). If it
+is determined that such information has been inadvertently collected on anyone
+under the age of thirteen (13), we shall immediately take the necessary steps
+to ensure that such information is deleted from our system's database, or in
+the alternative, that verifiable parental consent is obtained for the use and
+storage of such information. Anyone under the age of thirteen (13) must seek
+and obtain parent or guardian permission to use this website.<o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Unsubscribe or Opt-Out<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>All users and visitors to
+our website have the option to discontinue receiving communications from us by
+way of email or newsletters. To discontinue or unsubscribe from our website
+please send an email that you wish to unsubscribe to
+<span id='static_company_name_opt_out_email' class='saved-var company_name_opt_out_email step-7'>Unsubscribe@kjbp.press</span>. If you wish to unsubscribe or opt-out from any
+third-party websites, you must go to that specific website to unsubscribe or
+opt-out. <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> will continue to adhere to this Policy with
+respect to any personal information previously collected.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Links to Other Websites<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Our website does contain
+links to affiliate and other websites. <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> does not claim
+nor accept responsibility for any privacy policies, practices and/or procedures
+of other such websites. Therefore, we encourage all users and visitors to be
+aware when they leave our website and to read the privacy statements of every
+website that collects personally identifiable information. This Privacy Policy
+Agreement applies only and solely to the information collected by our website.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Notice to European Union Users<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span>'s
+operations are located primarily in the United States. If you provide
+information to us, the information will be transferred out of the European
+Union (EU) and sent to the United States. (The adequacy decision on the EU-US Privacy
+became operational on August 1, 2016. This framework protects the fundamental
+rights of anyone in the EU whose personal data is transferred to the United
+States for commercial purposes. It allows the free transfer of data to
+companies that are certified in the US under the Privacy Shield.) By providing
+personal information to us, you are consenting to its storage and use as
+described in this Policy.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Your Rights as a Data Subject<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Under the regulations of
+the General Data Protection Regulation ("GDPR") of the EU you have certain
+rights as a Data Subject. These rights are as follows:<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right to be informed:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means we must inform you of how we intend to use your personal data and we
+do this through the terms of this Policy.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right of access:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means you have the right to request access to the data we hold about you
+and we must respond to those requests within one month. You can do this by
+sending an email to <span id='static_company_contact_email_sc' class='saved-var company_contact_email_sc step-0'>info@kjbp.press</span>.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right to rectification:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means that if you believe some of the date, we hold is incorrect, you have
+the right to have it corrected. You can do this by logging into your account
+with us, or by sending us an email with your request.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right to erasure:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means you can request that the information we hold be deleted, and we will
+comply unless we have a compelling reason not to, in which case you will be
+informed of same. You can do this by sending an email to
+<span id='static_company_contact_email_sc' class='saved-var company_contact_email_sc step-0'>info@kjbp.press</span>.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right to restrict processing:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means you can change your communication preferences or opt-out of certain
+communications. You can do this by sending an email to
+<span id='static_company_name_opt_out_email' class='saved-var company_name_opt_out_email step-7'>Unsubscribe@kjbp.press</span>.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right of data portability:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means you can obtain and use the data we hold for your own purposes
+without explanation. If you wish to request a copy of your information, contact
+us at <span id='static_company_contact_email_sc' class='saved-var company_contact_email_sc step-0'>info@kjbp.press</span>.<o:p></o:p></span></p>
+<p class=MsoListParagraphCxSpMiddle><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l1 level1 lfo8'><![if !supportLists]><span style='font-size:12.0pt;line-height:107%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>The right to object:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+this means you can file a formal objection with us regarding our use of your
+information with regard to third parties, or its processing where our legal
+basis is our legitimate interest in it. To do this, please send an email to
+<span id='static_company_contact_email_sc' class='saved-var company_contact_email_sc step-0'>info@kjbp.press</span>.<o:p></o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>In addition to the rights
+above, please rest assured that we will always aim to encrypt and anonymize
+your personal information whenever possible. We also have protocols in place in
+the unlikely event that we suffer a data breach and we will contact you if your
+personal information is ever at risk. For more details regarding our security
+protections see the section below or visit our website at
+https://kjbp.press.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><a name="_Hlk13749826"><b><u><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Security </span></u></b></a><b><u><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span> takes
+precautions to protect your information. When you submit sensitive information
+via the website, your information is protected both online and offline.
+Wherever we collect sensitive information (e.g. credit card information), that
+information is encrypted and transmitted to us in a secure way. You can verify
+this by looking for a lock icon in the address bar and looking for
+"https" at the beginning of the address of the webpage. <o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>While we use encryption
+to protect sensitive information transmitted online, we also protect your
+information offline. Only employees who need the information to perform a
+specific job (for example, billing or customer service) are granted access to
+personally identifiable information. The computers and servers in which we
+store personally identifiable information are kept in a secure environment.
+This is all done to prevent any loss, misuse, unauthorized access, disclosure
+or modification of the user's personal information under our control.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>The company also uses Secure Socket Layer (SSL) for
+authentication and private communications to build users' trust and confidence
+in the internet and website use by providing simple and secure access and
+communication of credit card and personal information<span style='color:#ED7D31;
+mso-themecolor:accent2'>.</span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Acceptance of Terms<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>By using this website,
+you are hereby accepting the terms and conditions stipulated within the Privacy
+Policy Agreement. If you are not in agreement with our terms and conditions,
+then you should refrain from further use of our sites. In addition, your
+continued use of our website following the posting of any updates or changes to
+our terms and conditions shall mean that you agree and acceptance of such
+changes.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><u><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>How to Contact Us<o:p></o:p></span></u></b></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>If you have any questions or concerns regarding the
+Privacy Policy Agreement related to our website, please feel free to contact us
+at the following email, telephone number or mailing address.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Email:</span></b><span style='font-size:
+12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+<span id='static_company_contact_email_sc' class='saved-var company_contact_email_sc step-0'>info@kjbp.press</span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Telephone Number:</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+<span id='static_company_contact_telephone' class='saved-var company_contact_telephone step-0'>530-346-3552</span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Mailing Address:<br>
+</span></b><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'> <span id='static_company_contact_name' class='saved-var company_contact_name step-0'>KJBP PUBLISHING AND PRESS</span><br>
+<span id='static_company_contact_address' class='saved-var company_contact_address step-0'>Transient</span><br>
+<span id='static_company_contact_city' class='saved-var company_contact_city step-0'>Taos</span>, <span id='static_company_contact_state' class='saved-var company_contact_state step-0'>New Mexico</span><br>
+<span id='static_company_contact_zip_code' class='saved-var company_contact_zip_code step-0'>87571</span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#ED7D31;mso-themecolor:accent2'></span><span style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>The data controller responsible for your personal
+information for the purposes of GDPR compliance is:<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'> <span id='static_gdpr_controller_name' class='saved-var gdpr_controller_name step-8'>Kyle Jacob Butler</span><br>
+kyle.jacob.butler@gmail.com<br>
+<span id='static_gdpr_controller_telephone' class='saved-var gdpr_controller_telephone step-8'>5303463552</span><br>
+<span id='static_gdpr_controller_address' class='saved-var gdpr_controller_address step-8'>Unit 2268 318 Paseo Del Pueblo Norte</span><br>
+<span style='color:#ED7D31;mso-themecolor:accent2'></span><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>
+</b></span></b></p></p>
+<br style='mso-special-character:page-break;page-break-after:always;' />
+<div class='page-break' clear=all style='page-break-after:always;'></div>
+<o:p></o:p></span></p>
+<p class=MsoNormal><b><span style='font-size:10.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>GDPR Disclosure:<o:p></o:p></span></b></p>
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>If you answered "yes" to the question&nbsp;Does your
+website comply with the General Data Protection Regulation ("GDPR")?&nbsp;then
+the Privacy Policy above includes language that is meant to account for such
+compliance. Nevertheless, in order to be fully compliant with GDPR regulations
+your company must fulfill other requirements such as: (i) doing an assessment
+of data processing activities to improve security; (ii) have a data processing
+agreement with any third party vendors; (iii) appoint a data protection officer
+for the company to monitor GDPR compliance; (iv) designate a representative
+based in the EU under certain circumstances; and (v) have a protocol in place
+to handle a potential data breach. For more details on how to make sure your
+company is fully compliant with GDPR, please visit the official website
+at&nbsp;</span><a href="https://gdpr.eu/" target="_blank"><span style='font-size:10.0pt;line-height:107%;font-family:"Times New Roman",serif'>https://gdpr.eu</span></a><span style='font-size:10.0pt;line-height:107%;font-family:"Times New Roman",serif'>.
+FormSwift and its subsidiaries are in no way responsible for determining
+whether or not your company is in fact compliant with GDPR and takes no
+responsibility for the use you make of this Privacy Policy or for any potential
+liability your company may face in relation to any GDPR compliance issues.<o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:10.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=Default><b><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+mso-bidi-font-family:"Arial Unicode MS";background:white'>COPPA Compliance
+Disclosure:</span></b><b><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";background:white'><o:p></o:p></span></b></p>
+<p class=Default><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";background:white'><o:p>&nbsp;</o:p></span></p>
+<p class=Default><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+background:white'>This Privacy Policy presumes that your website is <u>not</u>
+directed at children under the age of 13 and does <u>not</u> knowingly collect
+personal identifiable information from them or allow others to do the same
+through your site. If this is not true for your website or online service and
+you do collect such information (or allow others to do so), please be aware
+that you must be compliant with all COPPA regulations and guidelines in order
+to avoid violations which could lead to law enforcement actions, including
+civil penalties. </span><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";background:white'><o:p></o:p></span></p>
+<p class=Default><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";background:white'><o:p>&nbsp;</o:p></span></p>
+<p class=Default><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+background:white'>In order to be fully compliant with COPPA your website or
+online service must fulfill other requirements such as: (i) posting a privacy
+policy which describes not only <i>your</i> practices, but also the practices
+of any others collecting personal information on your site or service — for
+example, plug-ins or ad networks; (ii) include a prominent link to your privacy
+policy anywhere you collect personal information from children;
+(iii)&nbsp;include a description of parental rights (e.g.<span style='mso-spacerun:yes'>&nbsp; </span>that you won't require a child to disclose
+more information than is reasonably necessary, that they can review their
+child's personal information, direct you to delete it, and refuse to allow any
+further collection or use of the child's information, and the procedures to
+exercise their rights); (iv) give parents "direct notice" of your information
+practices before collecting information from their children; and (v) obtain the
+parents' "verifiable consent" before collecting, using or disclosing personal
+information from a child. For more information on the definition of these terms
+and how to make sure your website or online service is fully compliant with
+COPPA please visit </span><a href="https://www.ftc.gov/tips-advice/business-center/guidance/childrens-online-privacy-protection-rule-six-step-compliance"><span class=Hyperlink0><span style='font-size:10.0pt;font-family:"Times New Roman",serif;
+background:white'>https://www.ftc.gov/tips-advice/business-center/guidance/childrens-online-privacy-protection-rule-six-step-compliance</span></span></a><span style='font-size:10.0pt;font-family:"Times New Roman",serif;background:white'>.
+FormSwift and its subsidiaries are in no way responsible for determining
+whether or not your company is in fact compliant with COPPA and takes no
+responsibility for the use you make of this Privacy Policy or for any potential
+liability your company may face in relation to any COPPA compliance issues. </span><span style='font-size:10.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";background:white'><o:p></o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+</div>
+<script type="f9b3a748e6fc4098eaf719bd-text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"788d9c2c7a","applicationID":"5505596","transactionName":"YgRVYEdSVhFSAkYIWFtOYkZcHF0aQw5AFRhRCEREWVJBTEMJQg==","queueTime":0,"applicationTime":273,"atts":"TkNCFg9IRU4RABBbTEgc","errorBeacon":"bam.nr-data.net","agent":""}</script><script src="https://ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="f9b3a748e6fc4098eaf719bd-|49" defer=""></script></body>
+</html>
